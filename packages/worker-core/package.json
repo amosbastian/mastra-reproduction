@@ -1,21 +1,24 @@
 {
-  "name": "@acme/worker",
+  "version": "0.0.0",
+  "name": "@acme/worker-core",
   "private": true,
   "type": "module",
+  "exports": {
+    "./tool": {
+      "types": "./dist/tool/index.d.ts",
+      "default": "./dist/tool/index.js"
+    },
+    "./package.json": "./package.json"
+  },
   "scripts": {
-    "build": "mastra build",
+    "build": "tsc -p tsconfig.build.json",
     "clean": "bun run rm -rf dist *.tsbuildinfo",
-    "dev": "mastra dev",
-    "start": "node .mastra/output/index.mjs",
+    "dev": "tsc -w -p tsconfig.build.json",
+    "start": "node dist/index.js",
     "typecheck": "tsc"
   },
   "dependencies": {
-    "@acme/db": "workspace:*",
     "@mastra/core": "0.16.3",
-    "@mastra/memory": "0.15.1",
-    "@mastra/pg": "0.15.2",
-    "dotenv": "17.2.2",
-    "node-cron": "^4.2.1",
     "zod": "4.1.8"
   },
   "devDependencies": {
@@ -23,6 +26,6 @@
     "@acme/typescript": "workspace:*",
     "@types/node": "24.3.1",
     "eslint": "9.35.0",
-    "mastra": "0.12.3"
+    "typescript": "5.9.2"
   }
 }
