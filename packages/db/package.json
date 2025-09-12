@@ -1,0 +1,52 @@
+{
+  "name": "@acme/db",
+  "version": "0.0.0",
+  "private": true,
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./schema": {
+      "types": "./dist/schema/index.d.ts",
+      "default": "./dist/schema/index.js"
+    },
+    "./migrate": {
+      "types": "./dist/migrate.d.ts",
+      "default": "./dist/migrate.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "clean": "bun run rm -rf dist *.tsbuildinfo",
+    "db:check": "drizzle-kit check",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:migrate:drop": "drizzle-kit drop",
+    "db:pull": "drizzle-kit introspect",
+    "db:push": "drizzle-kit push",
+    "db:studio": "drizzle-kit studio",
+    "db:up": "drizzle-kit up",
+    "db:seed": "bun seed.ts",
+    "dev": "tsc -w -p tsconfig.build.json",
+    "typecheck": "tsc"
+  },
+  "dependencies": {
+    "dotenv": "17.2.2",
+    "drizzle-orm": "0.44.5",
+    "drizzle-zod": "0.8.3",
+    "pg": "8.16.3",
+    "uuid": "13.0.0",
+    "zod": "3.25.76"
+  },
+  "devDependencies": {
+    "@acme/eslint": "workspace:*",
+    "@acme/typescript": "workspace:*",
+    "@types/node": "24.3.1",
+    "@types/pg": "8.15.5",
+    "drizzle-kit": "0.31.4",
+    "eslint": "9.35.0"
+  }
+}
