@@ -4,14 +4,15 @@
   "type": "module",
   "scripts": {
     "build": "mastra build",
-    "clean": "bun run rm -rf dist *.tsbuildinfo",
+    "clean": "bun run rm -rf dist *.tsbuildinfo .mastra",
     "dev": "mastra dev",
     "start": "node .mastra/output/index.mjs",
     "typecheck": "tsc"
   },
   "dependencies": {
     "@acme/db": "workspace:*",
-    "@mastra/core": "0.18.0",
+    "@acme/worker-core": "workspace:*",
+    "@mastra/core": "0.17.1",
     "@mastra/memory": "0.15.3",
     "@mastra/pg": "0.16.1",
     "dotenv": "17.2.2",
@@ -23,6 +24,6 @@
     "@acme/typescript": "workspace:*",
     "@types/node": "24.5.2",
     "eslint": "9.36.0",
-    "mastra": "0.13.2"
+    "mastra": "0.13.1"
   }
 }
