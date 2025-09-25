@@ -18,14 +18,14 @@
     "typecheck": "tsc"
   },
   "dependencies": {
-    "@mastra/core": "0.16.3",
-    "zod": "4.1.8"
+    "@mastra/core": "0.18.0",
+    "zod": "4.1.11"
   },
   "devDependencies": {
     "@acme/eslint": "workspace:*",
     "@acme/typescript": "workspace:*",
-    "@types/node": "24.3.1",
-    "eslint": "9.35.0",
+    "@types/node": "24.5.2",
+    "eslint": "9.36.0",
     "typescript": "5.9.2"
   }
 }
