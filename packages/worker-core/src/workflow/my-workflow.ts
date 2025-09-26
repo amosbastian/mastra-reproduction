@@ -29,6 +29,7 @@ export const myStep2 = createStep({
         user: "User",
       },
       runtimeContext,
+      suspend: () => Promise.resolve(),
     });
   },
   id: "my-step",
