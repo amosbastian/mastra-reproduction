@@ -12,7 +12,7 @@
   "dependencies": {
     "@acme/db": "workspace:*",
     "@acme/worker-core": "workspace:*",
-    "@mastra/core": "0.17.1",
+    "@mastra/core": "0.0.0-createToolOptions-20250926094418",
     "@mastra/memory": "0.15.3",
     "@mastra/pg": "0.16.1",
     "dotenv": "17.2.2",
