@@ -1,0 +1,29 @@
+{
+  "name": "@acme/cloudflare",
+  "version": "0.0.0",
+  "private": true,
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "clean": "bun run rm -rf dist *.tsbuildinfo",
+    "dev": "tsc -w -p tsconfig.build.json",
+    "typecheck": "tsc"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "3.901.0",
+    "@aws-sdk/s3-request-presigner": "3.901.0"
+  },
+  "devDependencies": {
+    "@acme/eslint": "workspace:*",
+    "@acme/typescript": "workspace:*",
+    "@types/node": "24.7.0",
+    "eslint": "9.37.0"
+  }
+}
