@@ -1,6 +1,7 @@
 import { generatePresignedUrl } from "@acme/cloudflare";
 import { RuntimeContext } from "@mastra/core/runtime-context";
 import { createStep, createWorkflow } from "@mastra/core/workflows";
+import { execa } from "execa";
 import { z } from "zod";
 import { myTool } from "../tool/my-tool.js";
 
@@ -15,6 +16,7 @@ export const myStep1 = createStep({
   execute: async ({ inputData }) => {
     const presignedUrl = await generatePresignedUrl("my-key");
     console.log("Presigned URL:", presignedUrl);
+    await execa("echo", ["Hello, World!"]);
   },
   id: "my-step",
   inputSchema: myInputSchema,

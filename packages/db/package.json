@@ -34,8 +34,8 @@
     "typecheck": "tsc"
   },
   "dependencies": {
-    "dotenv": "17.2.2",
-    "drizzle-orm": "0.44.5",
+    "dotenv": "17.2.3",
+    "drizzle-orm": "0.44.6",
     "drizzle-zod": "0.8.3",
     "pg": "8.16.3",
     "uuid": "13.0.0",
@@ -44,9 +44,9 @@
   "devDependencies": {
     "@acme/eslint": "workspace:*",
     "@acme/typescript": "workspace:*",
-    "@types/node": "24.5.2",
+    "@types/node": "24.7.0",
     "@types/pg": "8.15.5",
     "drizzle-kit": "0.31.5",
-    "eslint": "9.36.0"
+    "eslint": "9.37.0"
   }
 }

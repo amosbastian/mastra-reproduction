@@ -23,15 +23,16 @@
   },
   "dependencies": {
     "@acme/cloudflare": "workspace:*",
-    "@ai-sdk/google": "^2.0.17",
-    "@mastra/core": "0.0.0-createToolOptions-20250926094418",
+    "@ai-sdk/google": "2.0.17",
+    "@mastra/core": "0.20.0",
+    "execa": "9.6.0",
     "zod": "4.1.11"
   },
   "devDependencies": {
     "@acme/eslint": "workspace:*",
     "@acme/typescript": "workspace:*",
-    "@types/node": "24.5.2",
-    "eslint": "9.36.0",
-    "typescript": "5.9.2"
+    "@types/node": "24.7.0",
+    "eslint": "9.37.0",
+    "typescript": "5.9.3"
   }
 }
