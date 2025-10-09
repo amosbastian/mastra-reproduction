@@ -1,8 +1,8 @@
-import { generatePresignedUrl } from "@acme/cloudflare";
 import { RuntimeContext } from "@mastra/core/runtime-context";
 import { createStep, createWorkflow } from "@mastra/core/workflows";
 import { execa } from "execa";
 import { z } from "zod";
+import { generatePresignedUrlInternal } from "../shared/test-2.js";
 import { test } from "../shared/test.js";
 import { myTool } from "../tool/my-tool.js";
 
@@ -14,8 +14,8 @@ const myInputSchema = z.object({
 
 export const myStep1 = createStep({
   description: "My step",
-  execute: async ({ inputData }) => {
-    const presignedUrl = await generatePresignedUrl("my-key");
+  execute: async () => {
+    const presignedUrl = await generatePresignedUrlInternal("my-key");
     console.log("Presigned URL:", presignedUrl);
     await execa("echo", ["Hello, World!"]);
     await test();

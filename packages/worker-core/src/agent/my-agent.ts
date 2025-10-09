@@ -3,7 +3,7 @@ import { Agent } from "@mastra/core/agent";
 import { test } from "../shared/test.js";
 
 export const myAgent = new Agent({
-  instructions: async ({ runtimeContext }) => {
+  instructions: async () => {
     await test();
     return `Hello`;
   },
