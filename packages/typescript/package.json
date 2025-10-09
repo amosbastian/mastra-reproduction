@@ -7,6 +7,6 @@
     "access": "public"
   },
   "devDependencies": {
-    "@effect/language-service": "0.42.0"
+    "@effect/language-service": "0.43.2"
   }
 }

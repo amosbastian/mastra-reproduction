@@ -1,5 +1,5 @@
 import { sql } from "drizzle-orm";
-import { boolean, pgTable, text, uniqueIndex, vector } from "drizzle-orm/pg-core";
+import { boolean, pgTable, text, uniqueIndex } from "drizzle-orm/pg-core";
 import { id, timestamps } from "../sql.js";
 
 export const user = pgTable(
@@ -7,7 +7,6 @@ export const user = pgTable(
   {
     email: text("email").$type<`${string}@${string}`>().notNull(),
     emailVerified: boolean("email_verified").default(false),
-    embedding: vector("embedding", { dimensions: 1536 }), // Embedding based on the name of the industry
     id: id(),
     image: text("image"),
     name: text("name"),

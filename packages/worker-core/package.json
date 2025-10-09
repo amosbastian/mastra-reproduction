@@ -4,6 +4,10 @@
   "private": true,
   "type": "module",
   "exports": {
+    "./agent": {
+      "types": "./dist/agent/index.d.ts",
+      "default": "./dist/agent/index.js"
+    },
     "./tool": {
       "types": "./dist/tool/index.d.ts",
       "default": "./dist/tool/index.js"
@@ -22,11 +26,13 @@
     "typecheck": "tsc"
   },
   "dependencies": {
+    "@acme/db": "workspace:*",
     "@acme/cloudflare": "workspace:*",
-    "@ai-sdk/google": "2.0.17",
-    "@mastra/core": "0.20.0",
+    "@ai-sdk/google": "2.0.18",
+    "@mastra/core": "0.20.2",
+    "drizzle-orm": "0.44.6",
     "execa": "9.6.0",
-    "zod": "4.1.11"
+    "zod": "4.1.12"
   },
   "devDependencies": {
     "@acme/eslint": "workspace:*",

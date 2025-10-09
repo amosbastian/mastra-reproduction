@@ -3,6 +3,7 @@ import { RuntimeContext } from "@mastra/core/runtime-context";
 import { createStep, createWorkflow } from "@mastra/core/workflows";
 import { execa } from "execa";
 import { z } from "zod";
+import { test } from "../shared/test.js";
 import { myTool } from "../tool/my-tool.js";
 
 const runtimeContext = new RuntimeContext();
@@ -17,6 +18,7 @@ export const myStep1 = createStep({
     const presignedUrl = await generatePresignedUrl("my-key");
     console.log("Presigned URL:", presignedUrl);
     await execa("echo", ["Hello, World!"]);
+    await test();
   },
   id: "my-step",
   inputSchema: myInputSchema,
