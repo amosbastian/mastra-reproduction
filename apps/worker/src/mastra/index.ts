@@ -11,7 +11,7 @@ export const mastra = new Mastra({
     myAgent,
   },
   bundler: {
-    externals: ["canvas", "re2", "execa"],
+    externals: ["execa"],
   },
   storage,
   workflows: {
