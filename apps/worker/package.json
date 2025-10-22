@@ -12,7 +12,7 @@
   "dependencies": {
     "@acme/db": "workspace:*",
     "@acme/worker-core": "workspace:*",
-    "@mastra/core": "0.22.0",
+    "@mastra/core": "0.22.2",
     "@mastra/memory": "0.15.8",
     "@mastra/pg": "0.17.5",
     "dotenv": "17.2.3",
@@ -24,6 +24,6 @@
     "@acme/typescript": "workspace:*",
     "@types/node": "24.9.1",
     "eslint": "9.38.0",
-    "mastra": "0.17.1"
+    "mastra": "0.17.3"
   }
 }

@@ -29,7 +29,7 @@
     "@acme/cloudflare": "workspace:*",
     "@acme/db": "workspace:*",
     "@ai-sdk/google": "2.0.23",
-    "@mastra/core": "0.22.0",
+    "@mastra/core": "0.22.2",
     "drizzle-orm": "0.44.6",
     "execa": "9.6.0",
     "zod": "4.1.12"
