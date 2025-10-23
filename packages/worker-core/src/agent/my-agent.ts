@@ -1,6 +1,6 @@
 import { google } from "@ai-sdk/google";
 import { Agent } from "@mastra/core/agent";
-import { test } from "../shared/test.js";
+import { test } from "../shared/test";
 
 export const myAgent = new Agent({
   instructions: async () => {

@@ -1,1 +1,1 @@
-export * from "./my-agent.js";
+export * from "./my-agent";

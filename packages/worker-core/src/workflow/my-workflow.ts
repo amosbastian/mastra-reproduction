@@ -2,9 +2,9 @@ import { RuntimeContext } from "@mastra/core/runtime-context";
 import { createStep, createWorkflow } from "@mastra/core/workflows";
 import { execa } from "execa";
 import { z } from "zod";
-import { generatePresignedUrlInternal } from "../shared/test-2.js";
-import { test } from "../shared/test.js";
-import { myTool } from "../tool/my-tool.js";
+import { test } from "../shared/test";
+import { generatePresignedUrlInternal } from "../shared/test-2";
+import { myTool } from "../tool/my-tool";
 
 const runtimeContext = new RuntimeContext();
 

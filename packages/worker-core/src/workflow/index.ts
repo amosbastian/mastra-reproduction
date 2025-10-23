@@ -1,1 +1,1 @@
-export * from "./my-workflow.js";
+export * from "./my-workflow";
