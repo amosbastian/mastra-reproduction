@@ -4,41 +4,26 @@
   "private": true,
   "type": "module",
   "exports": {
-    "./agent": {
-      "types": "./dist/agent/index.d.ts",
-      "default": "./dist/agent/index.js"
-    },
-    "./tool": {
-      "types": "./dist/tool/index.d.ts",
-      "default": "./dist/tool/index.js"
-    },
     "./workflow": {
       "types": "./dist/workflow/index.d.ts",
       "default": "./dist/workflow/index.js"
-    },
-    "./package.json": "./package.json"
+    }
   },
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
-    "clean": "bun run rm -rf dist *.tsbuildinfo",
+    "clean": "bun run rm -rf dist *.tsbuildinfo .turbo node_modules",
     "dev": "tsc -w -p tsconfig.build.json",
     "start": "node dist/index.js",
     "typecheck": "tsc"
   },
   "dependencies": {
-    "@acme/cloudflare": "workspace:*",
     "@acme/db": "workspace:*",
-    "@ai-sdk/google": "2.0.23",
-    "@mastra/core": "0.22.2",
-    "drizzle-orm": "0.44.6",
-    "execa": "9.6.0",
+    "@mastra/core": "0.23.1",
+    "drizzle-orm": "0.44.7",
     "zod": "4.1.12"
   },
   "devDependencies": {
-    "@acme/eslint": "workspace:*",
     "@acme/typescript": "workspace:*",
-    "@types/node": "24.9.1",
-    "eslint": "9.38.0",
-    "typescript": "5.9.3"
+    "@types/node": "24.9.1"
   }
 }

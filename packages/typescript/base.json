@@ -16,12 +16,7 @@
     "skipLibCheck": true,
     "strict": true,
     "target": "es2022",
-    "verbatimModuleSyntax": true,
-    "plugins": [
-      {
-        "name": "@effect/language-service"
-      }
-    ]
+    "verbatimModuleSyntax": true
   },
   "display": "Base"
 }

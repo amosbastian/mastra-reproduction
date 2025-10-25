@@ -20,7 +20,7 @@
   },
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
-    "clean": "bun run rm -rf dist *.tsbuildinfo",
+    "clean": "bun run rm -rf dist *.tsbuildinfo .turbo node_modules",
     "db:check": "drizzle-kit check",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
@@ -35,18 +35,16 @@
   },
   "dependencies": {
     "dotenv": "17.2.3",
-    "drizzle-orm": "0.44.6",
+    "drizzle-orm": "0.44.7",
     "drizzle-zod": "0.8.3",
     "pg": "8.16.3",
     "uuid": "13.0.0",
     "zod": "4.1.12"
   },
   "devDependencies": {
-    "@acme/eslint": "workspace:*",
     "@acme/typescript": "workspace:*",
     "@types/node": "24.9.1",
     "@types/pg": "8.15.5",
-    "drizzle-kit": "0.31.5",
-    "eslint": "9.38.0"
+    "drizzle-kit": "0.31.5"
   }
 }
