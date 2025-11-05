@@ -18,12 +18,12 @@
   },
   "dependencies": {
     "@acme/db": "workspace:*",
-    "@mastra/core": "0.23.1",
+    "@mastra/core": "0.23.3",
     "drizzle-orm": "0.44.7",
     "zod": "4.1.12"
   },
   "devDependencies": {
     "@acme/typescript": "workspace:*",
-    "@types/node": "24.9.1"
+    "@types/node": "24.10.0"
   }
 }
