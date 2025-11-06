@@ -4,7 +4,7 @@ import { myWorkflow } from "@acme/worker-core/workflow";
 
 export const mastra = new Mastra({
   bundler: {
-    externals: ["@acme/worker-core"],
+    externals: [],
   },
   workflows: {
     myWorkflow,
